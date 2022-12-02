@@ -1,3 +1,5 @@
+
+
 const Joi = require('joi');
 const express = require('express');
 const app = express();
@@ -16,6 +18,10 @@ app.get('/', (req, res) => {
 
 app.get('/api/courses', (req,res) => {
     res.send([1,2,3]);
+});
+
+app.get('/api/ping', (req,res) =>{
+    res.send('pong');
 });
 
 app.get('/api/courses/:id', (req,res) =>{
